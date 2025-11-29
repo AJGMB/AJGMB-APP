@@ -10,8 +10,8 @@ from pathlib import Path
 # -----------------------------
 # Configuration - use env vars
 # -----------------------------
-YOUR_EMAIL = st.secrets["AJGMB_EMAIL"]
-YOUR_APP_PASSWORD = st.secrets["AJGMB_APP_PASSWORD"]
+YOUR_EMAIL = st.secrets["your_email@gmail.com"]
+YOUR_APP_PASSWORD = st.secrets["your_app_password"]
 
 # Initialize email client only if credentials are provided
 yag = None
@@ -114,3 +114,4 @@ else:
     # Helpful note for operator
     if not (YOUR_EMAIL and YOUR_APP_PASSWORD):
         st.info("Email is not configured. Set AJGMB_EMAIL and AJGMB_APP_PASSWORD environment variables to enable sending emails.")
+
