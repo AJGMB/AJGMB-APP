@@ -354,5 +354,5 @@ AYANFE JESU GOSPEL MUSIC BAND
                     st.info("✅ Admin notified via email with PDF attached!")
                 except Exception as e:
                     st.error(f"Failed to send email to admin: {e}")
-                   Updated Streamlit app with PDF and email features
+
 
