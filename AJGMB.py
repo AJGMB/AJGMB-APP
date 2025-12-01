@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import os
 import streamlit as st
 import yagmail
@@ -8,9 +8,8 @@ import io
 import tempfile
 from pathlib import Path
 
-# -----------------------------
-# Configuration - use env vars
-# -----------------------------
+
+# Configuration - use env var
 YOUR_EMAIL = st.secrets["AJGMB_EMAIL"]
 YOUR_APP_PASSWORD = st.secrets["AJGMB_APP_PASSWORD"]
 
@@ -22,17 +21,15 @@ if YOUR_EMAIL and YOUR_APP_PASSWORD:
     except Exception as e:
         st.warning(f"Unable to initialize email client: {e}")
 
-# -----------------------------
+
 # Session state defaults
-# -----------------------------
 st.set_page_config(page_title="AJGMB Application", layout="centered")
 st.session_state.setdefault("agreed_terms", False)
 st.session_state.setdefault("otp", None)
 st.session_state.setdefault("otp_verified", False)
 
-# -----------------------------
+
 # Terms page
-# -----------------------------
 if not st.session_state.agreed_terms:
     st.title("📄 Terms and Conditions for AYANFE JESU GOSPEL MUSIC BAND Application")
     st.markdown("""
@@ -61,7 +58,7 @@ else:
         fullname = st.text_input("Full Name *")
         email = st.text_input("Email Address *")
         
-        # ---------------- OTP UNDER EMAIL ----------------
+        # OTP UNDER EMAIL 
         st.subheader("📩 Email Verification (OTP)")
         if st.form_submit_button("Send OTP"):
             if not email:
@@ -118,7 +115,6 @@ else:
 
 
 
-=======
 import os
 import streamlit as st
 import yagmail
@@ -126,14 +122,12 @@ import random
 import datetime
 from fpdf import FPDF
 
-# -----------------------------
+
 # PAGE CONFIG
-# -----------------------------
 st.set_page_config(page_title="AJGMB Application", layout="centered")
 
-# -----------------------------
+
 # STYLING
-# -----------------------------
 st.markdown("""
 <style>
     .stApp { background-color: #ffffff !important; }
@@ -160,9 +154,8 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# -----------------------------
+
 # EMAIL CONFIG
-# -----------------------------
 YOUR_EMAIL = st.secrets["AJGMB_EMAIL"]
 YOUR_APP_PASSWORD = st.secrets["AJGMB_APP_PASSWORD"]
 
@@ -173,16 +166,14 @@ if YOUR_EMAIL and YOUR_APP_PASSWORD:
     except Exception as e:
         st.warning(f"Email setup failed: {e}")
 
-# -----------------------------
+
 # SESSION STATE
-# -----------------------------
 st.session_state.setdefault("agreed_terms", False)
 st.session_state.setdefault("otp", None)
 st.session_state.setdefault("otp_verified", False)
 
-# -----------------------------
+
 # TERMS PAGE
-# -----------------------------
 if not st.session_state.agreed_terms:
     st.title("📄 Terms & Conditions – AJGMB Application")
     st.write(""" 
@@ -202,9 +193,8 @@ if not st.session_state.agreed_terms:
         st.session_state.agreed_terms = True
         st.rerun()
 else:
-    # -----------------------------
+
     # APPLICATION FORM
-    # -----------------------------
     logo_path = "band_logo.png"
     if os.path.exists(logo_path):
         st.markdown(f"""
@@ -274,9 +264,8 @@ else:
         agree = st.checkbox("I agree to the terms and conditions *")
         submit = st.form_submit_button("Submit Application")
 
-    # -----------------------------
+    
     # AFTER SUBMIT
-    # -----------------------------
     if submit:
         if not agree:
             st.error("You must agree to the terms.")
@@ -323,7 +312,7 @@ else:
             pdf_file_path = f"AJGMB_Application_{fullname.replace(' ','_')}_{timestamp}.pdf"
             pdf.output(pdf_file_path)
 
-            # -----------------------------
+        
             # Send email to applicant with PDF attached
             if yag:
                 try:
@@ -352,7 +341,7 @@ AYANFE JESU GOSPEL MUSIC BAND
                 except Exception as e:
                     st.error(f"Failed to send email to applicant: {e}")
 
-            # -----------------------------
+            
             # Send email to admin with PDF attached
             if yag:
                 try:
@@ -365,4 +354,5 @@ AYANFE JESU GOSPEL MUSIC BAND
                     st.info("✅ Admin notified via email with PDF attached!")
                 except Exception as e:
                     st.error(f"Failed to send email to admin: {e}")
->>>>>>>   9c6c74f (Updated Streamlit app with PDF and email features)
+                   Updated Streamlit app with PDF and email features
+
