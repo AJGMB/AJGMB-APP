@@ -11,31 +11,31 @@ st.markdown("""
 
     /* GLOBAL FONT SIZE REDUCTION FOR MOBILE LOOK */
     html, body, [class*="css"]  {
-        font-size: 13px !important;   /* Smaller clean text */
+        font-size: 10px !important;   /* Smaller clean text */
     }
 
     /* SMALLER INPUT LABELS */
     label, .stTextInput label, .stSelectbox label {
-        font-size: 13px !important;
-        font-weight: 500 !important;
+        font-size: 10px !important;
+        font-weight: 450 !important;
     }
 
     /* SMALLER BUTTONS */
     .stButton>button {
-        font-size: 13px !important;
-        padding: 6px 14px !important;
-        border-radius: 6px !important;
+        font-size: 10px !important;
+        padding: 5px 12px !important;
+        border-radius: 5px !important;
     }
 
     /* SMALLER SELECT BOX TEXT */
     .stSelectbox div, .stSelectbox span, .stSelectbox p {
-        font-size: 13px !important;
+        font-size: 10px !important;
     }
 
     /* REDUCE HEADER SIZES */
-    h1 { font-size: 22px !important; }
-    h2 { font-size: 18px !important; }
-    h3 { font-size: 16px !important; }
+    h1 { font-size: 20px !important; }
+    h2 { font-size: 16px !important; }
+    h3 { font-size: 14px !important; }
 
 </style>
 """, unsafe_allow_html=True)
@@ -48,27 +48,66 @@ st.set_page_config(page_title="AJGMB Application", layout="centered")
 # STYLING
 st.markdown("""
 <style>
-    .stApp { background-color: #ffffff !important; }
-    body, label, span, div { color: #000 !important; font-size: 13px !important; }
-    input[type="text"], input[type="email"], input[type="number"], textarea {
-        background-color: #ffffff !important; color: #000 !important;
-        border: 1px solid #d0d0d0 !important; border-radius: 8px !important; padding: 7px !important;
-        box-shadow: 0px 0px 4px rgba(0,0,0,0.05) !important;
+
+    /* WHOLE APP BACKGROUND */
+    .stApp {
+        background-color: #000000 !important;
+        color: white !important;
     }
-    textarea { background-color: white !important; }
-    div[data-baseweb="select"] > div { background-color: white !important;
-        border-radius: 8px !important; border: 1px solid #d0d0d0 !important; box-shadow: 0px 0px 4px rgba(0,0,0,0.05) !important; }
-    div[data-baseweb="select"] * { color: black !important; }
-    .css-1rhbuit-multiValue { background-color: #eaf1ff !important; color: white !important; }
-    .css-12jo7m5 { color: white !important; }
-    .stFileUploader { background-color: white !important; padding: 10px !important;
-        border: 1px solid #d0d0d0 !important; border-radius: 10px !important; }
-    .stButton>button { background-color: #ffffff !important; border: 1px solid #1b75ff !important;
-        color: #000 !important; padding: 7px 20px !important; border-radius: 8px !important; transition: 0.2s; }
-    .stButton>button:hover { background-color: #d8e6ff !important; border-color: #1b75ff !important; }
-    .stButton>button:active { background-color: #1b75ff !important; color: white !important; }
-    input[type="checkbox"] { accent-color: #1b75ff !important; }
-    .block-container { padding-top: 1rem !important; padding-bottom: 1rem !important; max-width: 700px !important; }
+
+    /* ALL TEXT */
+    .stMarkdown, p, label, span, div, h1, h2, h3, h4, h5, h6 {
+        color: #ffffff !important;
+    }
+
+    /* INPUT FIELDS (text, number, email, date, etc.) */
+    .stTextInput input, .stNumberInput input, .stDateInput input {
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        border: 1px solid #444444 !important;
+    }
+
+    /* TEXTAREA */
+    textarea {
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        border: 1px solid #444444 !important;
+    }
+
+    /* SELECTBOX & MULTISELECT (closed box) */
+    div[data-baseweb="select"] > div {
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        border: 1px solid #444444 !important;
+    }
+
+    /* SELECTED TEXT */
+    div[data-baseweb="select"] span {
+        color: #ffffff !important;
+    }
+
+    /* DROPDOWN MENU BACKGROUND */
+    ul[role="listbox"] {
+        background-color: #000000 !important;
+    }
+
+    /* DROPDOWN OPTIONS */
+    ul[role="listbox"] li {
+        color: #ffffff !important;
+    }
+
+    /* OPTION HOVER */
+    ul[role="listbox"] li:hover {
+        background-color: #222222 !important;
+        color: #ffffff !important;
+    }
+
+/* 
+.stButton>button {
+    background-color: #000000;  /* black background */
+    color: #ffffff;             /* white text */
+    border: 1px solid #ffffff;  /* optional white border */
+}
 </style>
 """, unsafe_allow_html=True)
 
