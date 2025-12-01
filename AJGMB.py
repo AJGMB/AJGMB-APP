@@ -6,6 +6,41 @@ import datetime
 from fpdf import FPDF
 
 
+st.markdown("""
+<style>
+
+    /* GLOBAL FONT SIZE REDUCTION FOR MOBILE LOOK */
+    html, body, [class*="css"]  {
+        font-size: 13px !important;   /* Smaller clean text */
+    }
+
+    /* SMALLER INPUT LABELS */
+    label, .stTextInput label, .stSelectbox label {
+        font-size: 13px !important;
+        font-weight: 500 !important;
+    }
+
+    /* SMALLER BUTTONS */
+    .stButton>button {
+        font-size: 13px !important;
+        padding: 6px 14px !important;
+        border-radius: 6px !important;
+    }
+
+    /* SMALLER SELECT BOX TEXT */
+    .stSelectbox div, .stSelectbox span, .stSelectbox p {
+        font-size: 13px !important;
+    }
+
+    /* REDUCE HEADER SIZES */
+    h1 { font-size: 22px !important; }
+    h2 { font-size: 18px !important; }
+    h3 { font-size: 16px !important; }
+
+</style>
+""", unsafe_allow_html=True)
+
+
 # PAGE CONFIG
 st.set_page_config(page_title="AJGMB Application", layout="centered")
 
