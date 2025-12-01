@@ -117,6 +117,7 @@ else:
         st.info("Email is not configured. Set AJGMB_EMAIL and AJGMB_APP_PASSWORD environment variables to enable sending emails.")
 
 
+
 =======
 import os
 import streamlit as st
@@ -364,4 +365,4 @@ AYANFE JESU GOSPEL MUSIC BAND
                     st.info("✅ Admin notified via email with PDF attached!")
                 except Exception as e:
                     st.error(f"Failed to send email to admin: {e}")
->>>>>>> 9c6c74f (Updated Streamlit app with PDF and email features)
+>>>>>>>   9c6c74f (Updated Streamlit app with PDF and email features)
